@@ -1,6 +1,6 @@
 #include <iostream>
-#include <string>
 #include <windows.h>
+#include <string>
 #include <ctime>
 using namespace std;
 int body()
@@ -12,10 +12,10 @@ int body()
     string fuhao[10] = {")", "!", "@", "#", "$", "%", "^", "&", "*", "("};
     string words[53] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " "};
     string ascii[53] = {"97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "32"};
-    int choose;
+    string choose;
     cout << "请输入模式（1为加密，2为解密，3为关于此程序，4为退出）:";
     cin >> choose;
-    if (choose == 1)
+    if (choose == "1")
     {
         cout << "请输入明文（仅支持英文，不支持符号但支持空格，支持英文大小写）:";
         cin.get();
@@ -40,7 +40,7 @@ int body()
         }
         cout << e << endl;
     }
-    else if (choose == 2)
+    else if (choose == "2")
     {
         cout << "请输入密文:";
         cin >> a;
@@ -80,11 +80,11 @@ int body()
         }
         cout << p << endl;
     }
-    else if (choose == 3)
+    else if (choose == "3")
     {
         cout << "此程序由T_PLAN制作，语言为c++，名称是简易明文加密解密器，版本号为1.0，共用时4小时" << endl;
     }
-    else if (choose == 4)
+    else if (choose == "4")
     {
         cout << "感谢您的使用，goodbye" << endl;
         _sleep(900);
@@ -93,16 +93,16 @@ int body()
     else
     {
         cout << "输入有误" << endl;
-        _sleep(800);
     }
     system("pause");
+    system("cls");
 }
 int main()
 {
     while (1)
     {
         body();
-        system("cls");
+        _sleep(0);
     }
     return 0;
 }
